@@ -1,0 +1,26 @@
+{
+  "name": "core",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Score-saber/core.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Score-saber/core/issues"
+  },
+  "homepage": "https://github.com/Score-saber/core#readme",
+  "dependencies": {
+    "@typeit/discord": "^4.0.8",
+    "@types/node": "^14.6.0",
+    "fastify": "^3.2.1",
+    "tslib": "^2.0.1"
+  }
+}
