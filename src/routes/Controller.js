@@ -132,3 +132,33 @@ exports.getPlayerAccuracy = async(req, res) => {
         throw error;
     }
 };
+
+exports.getPlayerRecent = async(req, res) => {
+    try {
+        await fetch(`https://new.scoresaber.com/api/player/${req.params.id}/scores/recent`)
+        .then(res => res.json())
+        .then(scores => {
+            res.send({
+                success: true,
+                scores
+            });
+        });
+    } catch(error) {
+        throw error;
+    }
+}
+
+exports.getPlayerTop = async(req, res) => {
+    try {
+        await fetch(`https://new.scoresaber.com/api/player/${req.params.id}/scores/top`)
+        .then(res => res.json())
+        .then(scores => {
+            res.send({
+                success: true,
+                scores
+            });
+        });
+    } catch(error) {
+        throw error;
+    }
+}

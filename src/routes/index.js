@@ -86,6 +86,26 @@ const routes = [
         url: '/player/:id/accuracy/',
         handler: Controller.getPlayerAccuracy
     },
+    {
+        method: 'GET',
+        url: '/player/:id/recent',
+        handler: Controller.getPlayerRecent
+    },
+    {
+        method: 'GET',
+        url: '/player/:id/recent/',
+        handler: Controller.getPlayerRecent
+    },
+    {
+        method: 'GET',
+        url: '/player/:id/top',
+        handler: Controller.getPlayerTop
+    },
+    {
+        method: 'GET',
+        url: '/player/:id/top/',
+        handler: Controller.getPlayerTop
+    }
 ];
 
 module.exports = routes;

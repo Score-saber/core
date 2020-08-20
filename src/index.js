@@ -14,9 +14,11 @@ const routes = require('./routes');
             }
         );
 
-        routes.forEach((route, index) => {
-            server.route(route);
-        });
+        routes.forEach(
+            (route, index) => {
+                server.route(route);
+            }
+        );
     } catch(error) {
         throw error;
     }
