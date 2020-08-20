@@ -140,7 +140,7 @@ exports.getPlayerRecent = async(req, res) => {
         .then(scores => {
             res.send({
                 success: true,
-                scores
+                scores: scores.scores
             });
         });
     } catch(error) {
@@ -155,10 +155,25 @@ exports.getPlayerTop = async(req, res) => {
         .then(scores => {
             res.send({
                 success: true,
-                scores
+                scores: scores.scores
             });
         });
     } catch(error) {
         throw error;
     }
 }
+
+exports.getPlayers = async(req, res) => {
+    try {
+        await fetch(`https://new.scoresaber.com/api/players/`)
+        .then(res => res.json()) 
+        .then(players => {
+            res.send({
+                success: true,
+                players: players.players
+            });
+        });
+    } catch(error) {
+        throw error;
+    }
+};

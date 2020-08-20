@@ -105,6 +105,16 @@ const routes = [
         method: 'GET',
         url: '/player/:id/top/',
         handler: Controller.getPlayerTop
+    },
+    {
+        method: 'GET',
+        url: '/players',
+        handler: Controller.getPlayers
+    },
+    {
+        method: 'GET',
+        url: '/players/',
+        handler: Controller.getPlayers
     }
 ];
 
