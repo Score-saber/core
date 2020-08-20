@@ -18,9 +18,7 @@
   },
   "homepage": "https://github.com/Score-saber/core#readme",
   "dependencies": {
-    "@typeit/discord": "^4.0.8",
-    "@types/node": "^14.6.0",
     "fastify": "^3.2.1",
-    "tslib": "^2.0.1"
+    "node-fetch": "^2.6.0"
   }
 }
