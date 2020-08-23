@@ -17,7 +17,8 @@ exports.getPlayer = async(req, res) => {
         .then(data => {
             res.send({
                 success: true,
-                data
+                playerInfo: data.playerInfo,
+                stats: data.scoreStats
             });
         });
     } catch(error) {
