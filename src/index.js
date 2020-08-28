@@ -4,7 +4,7 @@ const routes = require('./routes');
 (async () => {
     try {
         await server.listen(
-            801,
+            80,
             '0.0.0.0',
             function(error, address) {
                 if(error) {
