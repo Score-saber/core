@@ -10,6 +10,36 @@ exports.root = async(req, res) => {
     }
 };
 
+exports.getMaps = async(req, res) => {
+    try {
+        await fetch(`https://beatsaver.com/api/maps/hot/`, { headers: { 'User-Agent': 'Poopoo/1.0.0'}})
+        .then(res => res.json())
+        .then(json => {
+            res.send({
+                success: true,
+                maps: json.docs
+            });
+        });
+    } catch(error) {
+        throw error;
+    }
+};
+
+exports.getMapById = async(req, res) => {
+    try {
+        await fetch(`https://beatsaver.com/api/maps/by-hash/${req.params.id}/`, { headers: { 'User-Agent': 'Poopoo/1.0.0'}})
+        .then(res => res.json())
+        .then(json => {
+            res.send({
+                success: true,
+                maps: json
+            });
+        });
+    } catch(error) {
+        throw error;
+    }
+}
+
 exports.getPlayer = async(req, res) => {
     try {
         await fetch(`https://new.scoresaber.com/api/player/${req.params.id}/full`)
