@@ -24,6 +24,50 @@ exports.getMaps = async(req, res) => {
         throw error;
     }
 };
+exports.getLatestMap = async(req, res) => {
+    try {
+        await fetch(`https://beatsaver.com/api/maps/latest/${req.params.page}`, { headers: { 'User-Agent': 'Poopoo/1.0.0' }})
+        .then(res => res.json())
+        .then(json => {
+            res.send({
+                success: true,
+                maps: json.docs
+            });
+        });
+    } catch(error) {
+        throw error;
+    }
+};
+
+exports.getPlaysMap = async(req, res) => {
+    try {
+        await fetch(`https://beatsaver.com/api/maps/plays/${req.params.page}`, { headers: { 'User-Agent': 'Poopoo/1.0.0' }})
+        .then(res => res.json())
+        .then(json => {
+            res.send({
+                success: true,
+                maps: json.docs
+            });
+        });
+    } catch(error) {
+        throw error;
+    }
+};
+
+exports.getMapsByPage = async(req, res) => {
+    try {
+        await fetch(`https://beatsaver.com/api/maps/hot/${req.params.page}`, { headers: { 'User-Agent': 'Poopoo/1.0.0' }})
+        .then(res => res.json())
+        .then(json => {
+            res.send({
+                success: true,
+                maps: json.docs
+            });
+        });
+    } catch(error) {
+        throw error;
+    }
+};
 
 exports.getMapById = async(req, res) => {
     try {

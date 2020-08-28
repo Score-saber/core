@@ -135,6 +135,26 @@ const routes = [
         method: 'GET',
         url: '/map/:id/',
         handler: Controller.getMapById
+    },
+    {
+        method: 'GET',
+        url: '/maps/:page',
+        handler: Controller.getMapsByPage
+    },
+    {
+        method: 'GET',
+        url: '/maps/:page/',
+        handler: Controller.getMapsByPage
+    },
+    {
+        method: 'GET',
+        url: '/maps/latest/:page',
+        handler: Controller.getLatestMap
+    },
+    {
+        method: 'GET',
+        url: '/maps/plays/:page',
+        handler: Controller.getPlaysMap
     }
 ];
 
